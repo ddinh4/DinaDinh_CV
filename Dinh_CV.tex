@@ -1,0 +1,236 @@
+\documentclass[paper=a4,fontsize=11pt]{scrartcl}	
+	
+\usepackage{wrapfig}							
+\usepackage{amsmath,amsfonts,amsthm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage[svgnames]{xcolor}
+\usepackage[top=15ex, bottom=15ex, left=15ex, right=15ex]{geometry}
+	\textheight=700px
+\usepackage{url}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks, linkcolor={blue},
+    citecolor={blue}, urlcolor={blue}
+}
+
+\frenchspacing
+\pagestyle{empty}		% No pagenumbers/headers/footers
+
+
+\usepackage{sectsty}	% Custom sectioning
+
+\sectionfont{%			% Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%			% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}
+	}
+
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}	
+
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{
+		\Huge \usefont{OT1}{phv}{b}{n}  #1 \hfill		% Name
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1} % Slogan (optional)
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\TableEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 	% Indentation
+		\parbox{\spacebox}{
+		\textit{#1}}							% Title (birth, address, skills, etc.)
+		\hspace{1.5em} #2 \par}					% Entry
+
+\newcommand{\DetailEntry}[4]{
+		\noindent \hangindent=0em\hangafter=0 \textbf{#1} \hfill 	% Title
+		\colorbox{Purple}{%
+			\parbox{10em}{%
+			\hfill\color{White}#2}} \par						% Time
+		\vspace{0.2em}
+		\noindent \hangindent=0em\hangafter=0\textit{#3} \par		% Place, School, Company, etc.
+		\noindent\hangindent=0em\hangafter=0 \small #4 			% Description
+		\normalsize \par}
+
+
+\newcommand{\PubEntry}[2]{
+\parbox{0.8\textwidth}{#1\\} \hfill #2\\}
+
+
+%%% ------------------------------------------------------------
+%%% BEGIN DOCUMENT
+%%% ------------------------------------------------------------
+\parindent=0em
+\begin{document}
+
+
+\MyName{Dina Dinh}
+\vspace{0.4 cm}
+
+
+
+
+\begin{table}[ht!]
+	\begin{minipage}{0.5\linewidth}
+		
+		\label{table:student}
+		\centering
+		\begin{tabular}{ll}
+			
+			Email:          & \href{mailto:dinadinh99@gmail.com}{dinadinh99@gmail.com}, \href{mailto:ddinh4@lsu.edu}{ddinh4@lsu.edu} \\
+            Github & \href{https://github.com/ddinh4}{https://github.com/ddinh4}\\
+            Location: & Baton Rouge, LA \\
+            Office: & 71B Martin D. Woodin Hall\\
+            Phone: & 225-278-9881 
+		\end{tabular}
+	\end{minipage}\hfill
+	\begin{minipage}{0.5\linewidth}
+		\raggedleft
+		%\includegraphics[scale=0.055]{images.jpg}
+		
+		\label{ }
+	\end{minipage}
+\end{table}
+
+
+%\sepspace
+%\vspace{1cm}
+%%% Education
+%
+
+
+
+\NewPart{Education}
+
+\DetailEntry{Master of Applied Statistics}{Currently}{Louisiana State University, Experimental Statistics Department}{Anticipated Graduation: Spring 2024}
+
+
+\vspace{1em}
+
+\DetailEntry{Phlebotomy Technician Certification
+}{January 2022}{Next Level Educational Services, Laplace, LA}
+
+\vspace{1em}
+\DetailEntry{Bachelor of Science in Mathematics}{Spring 2021}{Louisiana State University, Mathematics Department}{GPA: 3.80}
+
+
+\NewPart{Professional Experience:}
+
+\DetailEntry{Teaching Assistant for Undergraduate Level}{2022-2024}{Louisiana State University, Experimental Statistics Department}{Teaching and supervising labs, grading, tutoring and assisting with the use of educational technology in the undergraduate level class.}
+
+\DetailEntry{Statistical Consultant}{2023-2024}{Louisiana State University, Experimental Statistics Department}{Collaborating with clients under the guidance of statistics experts to perform statistical analyses, assist in the selection and application of statistical models, and provide data interpretation.}
+
+\DetailEntry{Guest Lecturer}{2024}{Louisiana State University, Experimental Statistics Department}{Delivering a presentation to describe Random Forest and elaborating on its use for various applications.}
+
+\DetailEntry{World System Builder Launch Event}{2024}{Austin, Texas}{Participated in a financial education conference, gaining valuable insights into establishing a solid financial foundation. Acquired knowledge on the crucial impact of financial education on individuals and developed a better understanding of tax principles.}
+
+\DetailEntry{Teaching Assistant for Graduate Level}{2023}{Louisiana State University, Experimental Statistics Department}{Supervising and teaching labs, grading, tutoring, and preparing SAS tutorial videos, homework, general course development.}
+
+\DetailEntry{Undergraduate Researcher}{2020-2021}{Louisiana State University, Biological Engineering Department}{Testing different silane surface material treatments and analyzing zebrafish sperm and polystyrene beads using light microscopy, AmScope, and 
+Nikon microscope.}
+
+\DetailEntry{Student Panelist}{2019}{Louisiana State University, College of Science}{Shared advice and past experiences at Louisiana State University to the freshman class pursuing a career in the medical field.}
+
+\NewPart{Work Experience}
+
+\DetailEntry{Blood Donor Technician 1
+}{2022}{Our Lady of the Lake Blood Donor Center, Baton Rouge, LA}{Displaying phlebotomy skills and determining blood donor eligibility by performing related testing, evaluating donor/patient medical history, recruiting blood donors, and completing appropriate records pertaining to donations in a manner that ensures donor confidentiality}
+
+\DetailEntry{Medical Clerk}{2021-2022}{Dr. Xuong T. Dao Clinic, Baton Rouge, LA}{Preparing patient charts and gathering information and documents from patients, organizing medical records, recording patients' vitals, and collecting laboratory specimens for testing.}
+
+\DetailEntry{Receptionist}{2016-2021}{Young Nails, Zachary, LA}{Greeting and welcoming customers, assisting with marketing and sales by providing customers with information on promotions and new products and services, and processing transactions and issuing receipts.}
+
+\DetailEntry{Hostess}{2015-2016}{Lagniappe Restaurant, Zachary, LA}{Seating guests, managing the seating chart, monitoring restaurant activity to determine seating and dining flow, and assisting coworkers with side work.}
+
+\DetailEntry{First Responder}{2014-2015}{Emergency Medical Services, Baton Rouge, LA}{Assisting paramedics with 911 calls for emergency medical assistance, taking patient vitals, organizing medical supplies.}
+
+
+\NewPart{Oral Presentations}
+
+\PubEntry{\textbf{Dinh D.}, Amos J., Lewis M.,  “Comparing Logistic Regression and Random Forest Model on Stroke Prediction”, Louisiana State University}{2023}
+
+\PubEntry{\textbf{Dinh, D.}, “AQI Analysis Using Bayesian Methods”,  Louisiana State University}{2023}
+
+\PubEntry{\textbf{McNair Scholars \& Undergraduate Research Conference}, University of Maryland, “Chemical Modifications of 3-D Printed Molds for Microfluidic Devices”}{2021}
+
+\PubEntry{\textbf{LSU Discover Day}, Louisiana State University, “Chemical Modifications of 3-D Printed Molds for Microfluidic Devices”}{2021}
+
+
+
+
+
+\NewPart{Skills:}
+\textbf{Software and Computer Languages:}  R, Python, SAS, SAS Enterprise Guide, GitHub, JMPpro, LaTeX, Windows Office, QGIS, Mathematica, STATA, SQL, AutoCAD, Autodesk Inventor \\
+
+\textbf{Languages:} English (Proficient), Vietnamese (Intermediate)\\
+
+\textbf{Statistical Methodology:} Proficient in applying statistical methodologies to analyze and interpret data.\\
+
+\textbf{Machine Learning:} Well-versed in utilizing machine learning techniques to develop predictive models, optimized processes, and extract patterns from data.\\
+
+\textbf{Leadership:} Guided teams towards common goals, encouraging collaboration, and making strategic decisions to achieve objectives.\\
+
+\textbf{Communication:} Strong verbal and written communication skills, facilitating efficient conveying of complex technical concepts.\\
+
+\textbf{Problem Solving:} Demonstrated ability to approach challenges effectively, employing critical thinking, and analytical skills to identify solutions.\\
+
+
+\NewPart{Awards, honors, and memberships}
+\PubEntry{Graduate Travel Award, Louisiana State University}{Spring 2024}
+\PubEntry{LSU Vietnamese Student Association}{Fall 2020}
+\PubEntry{Ronald E. McNair Research Scholar}{Spring 2020} 
+\PubEntry{LSU President’s Honor Roll}{Fall 2017}
+
+
+
+\NewPart{References}
+
+Dr. Thanos Gentimis, \\
+Assistant Professor, \\
+Experimental Statistics, \\
+Louisiana State University, \\
+tgentimis@agcenter.lsu.edu\\
+(225) 578-8303\\
+
+
+
+\vspace{0.3cm}
+
+Dr. Bei B. Guo,\\
+Associate Professor, \\
+Experimental Statistics,\\
+Louisiana State University, \\
+beibeiguo@lsu.edu, \\
+225-578-8382 \\
+
+\vspace{0.3cm}
+
+\newpage
+
+Dr. Bin Li, \\
+Professor, Department Chair, \\
+Experimental Statistics,\\
+Louisiana State University, \\
+bli@lsu.edu, \\
+225-578-1343\\
+
+\vspace{0.3cm}
+
+Dr. Xuong T. Dao, MD, \\
+Internal Medicine Specialist, \\
+Baton Rouge, LA, \\
+drdaoclinic@gmail.com, \\
+(225) 272-8222\\
+
+\end{document}
+
+
+
